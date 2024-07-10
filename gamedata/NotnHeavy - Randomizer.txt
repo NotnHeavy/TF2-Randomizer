@@ -1,0 +1,69 @@
+"Games"
+{
+    "tf"
+    {
+        "Offsets"
+        {
+            "CUtlVector::m_Size"
+            {
+                "windows"       "12"
+                "linux"         "12"
+            }
+            
+            "CTFPlayerShared::UpdateChargeMeter()::ClassCheck"
+            {
+                "windows"       "24"
+                "linux"         "18"
+            }
+
+            "OSType"
+            {
+                "windows"       "0"
+                "linux"         "1"
+            }
+        }
+        "Signatures"
+        {
+            // xref offset aModChargeTime ; "mod_charge_time"
+            "CTFWearableDemoShield::DoSpecialAction()"
+            {
+                "library"       "server"
+                "windows"       "\x55\x8B\xEC\xA1\x2A\x2A\x2A\x2A\x53\x8B\xD9"
+                "linux"         "@_ZN21CTFWearableDemoShield15DoSpecialActionEP9CTFPlayer"
+            }
+
+            // look for string "mult_player_aiming_movespeed"
+            "CTFPlayer::TeamFortress_CalculateMaxSpeed()" 
+			{
+				"library"       "server"
+				"windows"       "\x55\x8B\xEC\x83\xEC\x18\x56\x8B\xF1\x8B\x0D\x2A\x2A\x2A\x2A"
+				"linux"         "@_ZNK9CTFPlayer30TeamFortress_CalculateMaxSpeedEb"
+			}
+
+            // xref offset aChargeRecharge ; "charge_recharge_rate"
+            "CTFPlayerShared::UpdateChargeMeter()"
+            {
+                "library"       "server"
+                "windows"       "\x55\x8B\xEC\x83\xEC\x18\x56\x8B\xF1\x6A\x04"
+                "linux"         "@_ZN15CTFPlayerShared17UpdateChargeMeterEv"
+            }
+        }
+        "Functions"
+        {
+            "CTFPlayer::TeamFortress_CalculateMaxSpeed()"
+            {
+                "signature"     "CTFPlayer::TeamFortress_CalculateMaxSpeed()"
+                "callconv"      "thiscall"
+                "this"          "entity"
+                "return"        "float"
+                "arguments"
+                {
+                    "bIgnoreSpecialAbility"
+                    {
+                        "type"  "bool"
+                    }
+                }
+            }
+        }
+    }
+}
