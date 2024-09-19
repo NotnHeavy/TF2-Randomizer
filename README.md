@@ -7,6 +7,8 @@ This plugin has a similar concept to other Randomizer plugins - your loadout wil
 ## How to install
 Just download the `.zip` archive and extract it to your SourceMod directory. In order to load the `Weapon Manager` config file without having it set in `weapon_manager.cfg`, you will need to type `weapon_load "NotnHeavy - Randomizer"` and then `weapon_save` to save to your `autosave.cfg` file.
 
+In order to tweak weapons for other classes, it is recommended that you use this plugin alongside [Weapon Fixes](https://github.com/NotnHeavy/TF2-Weapon-Fixes).
+
 ## Dependencies
 This plugin is compiled using SourceMod 1.12, but should work under SourceMod 1.11.
 
