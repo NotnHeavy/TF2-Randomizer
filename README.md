@@ -5,7 +5,7 @@ Ever wanted to be randomly given a Rocket Launcher in your melee slot and then s
 This plugin has a similar concept to other Randomizer plugins - your loadout will be randomized upon respawn. However, **any** weapon can spawn in **any** slot (with the exception of the sapper/PDA slots for Spy because they can cause crashes, and sappers because they're broken currently).
 
 ## How to install
-Just download the `.zip` archive and extract it to your SourceMod directory. In order to load the `Weapon Manager` config file without having it set in `weapon_manager.cfg`, you will need to type `weapon_load "NotnHeavy - Randomizer"` and then `weapon_save` to save to your `autosave.cfg` file.
+Just download the `.zip` archive and extract it to your SourceMod directory. In order to load the `Weapon Manager` config file without having it set in `weapon_manager.cfg`, you will need to type `weapon_load "NotnHeavy - Randomizer"` and then `weapon_write` to save to your `autosave.cfg` file.
 
 In order to tweak weapons for other classes, it is recommended that you use this plugin alongside [Weapon Fixes](https://github.com/NotnHeavy/TF2-Weapon-Fixes).
 
